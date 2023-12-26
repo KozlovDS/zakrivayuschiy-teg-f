@@ -28,7 +28,7 @@
 
 .container {
   margin: 0 auto;
-  max-inline-size: 696px;
+  max-inline-size: 700px;
   inline-size: 100%;
 }
 
@@ -37,7 +37,7 @@
   flex-direction: column;
   align-items: center;
   gap: 25px;
-  margin-block: 102px;
+  margin-block: 100px;
   border: 2px solid var(--accent-color);
   padding-block: clamp(7.5rem, 6.3318rem + 4.9844vw, 8.5rem) 25px;
   font-family: var(--accent-font);
@@ -65,7 +65,7 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  padding-left: 22px;
+  padding-left: 18px;
 }
 
 .theme-menu__button {
@@ -123,8 +123,8 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  margin-block-end: 50px;
+  gap: 49px;
+  margin-block-end: 48px;
 }
 
 .card {
@@ -192,14 +192,14 @@
 .card__buttons {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 4px;
   align-self: end;
 }
 
 .card__icon-button {
-  transition: border 0.3s ease;
-  border: 2px solid transparent;
   display: flex;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -245,8 +245,8 @@
 }
 
 .sparks {
-  fill: var(--heart-main-body-color);
   opacity: 0;
+  fill: var(--heart-main-body-color);
 }
 
 .like-icon.is-liked .core {
@@ -282,12 +282,12 @@
 }
 
 .card__like-button {
+  position: relative;
   border: 2px solid var(--accent-color);
   padding: 10px 17px;
-  min-inline-size: 130px;
-  transition: box-shadow 0.3s ease;
-  position: relative;
   overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  min-inline-size: 130px;
 }
 
 .card__like-button:focus-visible,
@@ -300,14 +300,14 @@
 .footer__button::before,
 .dialog__button::before {
   content: "";
-  display: block;
-  inline-size: 100%;
-  block-size: 100%;
-  background-color: var(--accent-color);
   position: absolute;
   inset: 0;
-  translate: -100% 0;
+  display: block;
+  background-color: var(--accent-color);
   transition: translate 0.5s ease-in-out;
+  inline-size: 100%;
+  block-size: 100%;
+  translate: -100% 0;
 }
 
 .card__like-button:hover::before,
@@ -317,47 +317,48 @@
 }
 
 .button__text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: var(--hover-button-color);
   font-family: var(--accent-font);
   font-size: 14px;
   line-height: 1;
-  position: relative;
-  z-index: 1;
-  color: var(--hover-button-color);
   mix-blend-mode: difference;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
 }
 
 .footer {
-  margin-block-end: 102px;
+  margin-block-end: 100px;
 }
 
 .footer__button {
+  position: relative;
   display: block;
   margin: 0 auto;
   border: 2px solid var(--accent-color);
   padding: 15px 18px;
-  background-color: var(--bg-color);
-  max-inline-size: clamp(19.125rem, 17.0076rem + 9.0343vw, 20.9375rem);
-  transition: box-shadow 0.3s ease;
-  position: relative;
   overflow: hidden;
+  background-color: var(--bg-color);
+  transition: box-shadow 0.3s ease;
+  max-inline-size: clamp(19.125rem, 17.0076rem + 9.0343vw, 20.9375rem);
 }
 
 .footer__button-icon {
-  mix-blend-mode: difference;
   fill: var(--hover-button-color);
+  mix-blend-mode: difference;
   inline-size: clamp(1.3125rem, 2.2611rem + -2.1807vw, 1.75rem);
   block-size: clamp(1.3125rem, 2.2611rem + -2.1807vw, 1.75rem);
 }
 
 .dialog {
+  border: 2px solid var(--accent-color);
   padding: 32px;
   background-color: var(--bg-color);
   max-inline-size: 357px;
-  border: 2px solid var(--accent-color);
 }
 
 .dialog::backdrop {
@@ -365,15 +366,15 @@
 }
 
 .dialog__title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
   color: var(--accent-color);
   font-family: var(--accent-font);
   font-size: 14px;
   line-height: 1.5; /* 21px */
   text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 30px;
 }
 
 .dialog__icon {
@@ -382,10 +383,16 @@
 }
 
 .dialog__button {
+  position: relative;
   margin: 0 auto;
   border: 2px solid var(--accent-color);
-  inline-size: 100%;
   padding: 9px 17px;
-  position: relative;
   overflow: hidden;
+  inline-size: 100%;
+}
+
+@media (width <= 375px) {
+  .logo__title {
+    font-size: clamp(2.8125rem, 1.358rem + 7.2727vw, 3.0625rem);
+  }
 }
