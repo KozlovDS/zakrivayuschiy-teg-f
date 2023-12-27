@@ -360,7 +360,7 @@
   border: 2px solid var(--accent-color);
   padding: 32px;
   background-color: var(--bg-color);
-  max-inline-size: 357px;
+  max-inline-size: clamp(21.3125rem, 20.4704rem + 4.2105vw, 22.3125rem);
 }
 
 .dialog::backdrop {
@@ -396,5 +396,9 @@
 @media (width <= 375px) {
   .logo__title {
     font-size: clamp(2.8125rem, 1.358rem + 7.2727vw, 3.0625rem);
+  }
+
+  .dialog {
+    max-inline-size: clamp(18.75rem, 3.8409rem + 74.5455vw, 21.3125rem);
   }
 }
