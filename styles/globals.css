@@ -32,10 +32,10 @@ a {
 
 button,
 input {
+  padding: 0;
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
-  padding: 0;
 }
 
 ul,
@@ -45,20 +45,48 @@ ol {
 
 .visually-hidden {
   position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
 }
 
 .button {
-  cursor: pointer;
-  background-color: transparent;
   border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .button:focus {
   outline: none;
+}
+
+.blur {
+  filter: blur(3px);
+}
+
+.brightness {
+  filter: brightness(0.7);
+}
+
+.hue-rotate {
+  filter: hue-rotate(180deg);
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.saturate {
+  filter: saturate(2);
+}
+
+.sepia {
+  filter: sepia(1);
+}
+
+.multiple {
+  filter: brightness(0.8) hue-rotate(180deg) saturate(0.8) sepia(1);
 }

@@ -142,12 +142,14 @@
   position: relative;
   display: flex;
   border-block: 2px solid var(--accent-color);
+  max-block-size: clamp(19.75rem, -0.4605rem + 101.0526vw, 43.75rem);
 }
 
 .card__label {
   position: absolute;
   top: clamp(1.4375rem, 1.2915rem + 0.6231vw, 1.5625rem);
   right: clamp(0.6875rem, -0.3347rem + 4.3614vw, 1.5625rem);
+  z-index: 1;
   opacity: 0.5;
   color: var(--accent-color);
   font-family: var(--accent-font);
