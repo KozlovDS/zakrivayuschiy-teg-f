@@ -393,7 +393,7 @@
 }
 
 @media (width <= 375px) {
-  .logo__title {
+  .header__title {
     font-size: clamp(2.8125rem, 1.358rem + 7.2727vw, 3.0625rem);
   }
 
