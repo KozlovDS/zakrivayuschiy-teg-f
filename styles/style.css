@@ -36,28 +36,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
   margin-block: 100px;
   border: 2px solid var(--accent-color);
   padding-block: clamp(7.5rem, 6.3318rem + 4.9844vw, 8.5rem) 25px;
   font-family: var(--accent-font);
+  text-transform: uppercase;
   background-color: var(--bg-color);
 }
 
 .logo {
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.logo__title {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
+  text-decoration: none;
 }
 
-.logo__title-smoll {
+.header__title {
+  margin-block-end: 5px;
+  font-weight: var(--font-weight-text);
   font-size: clamp(0.875rem, 0.2179rem + 2.8037vw, 1.4375rem);
 }
 
@@ -89,6 +84,7 @@
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
+  top: 0;
   left: -22px;
   display: block;
   animation: pointer 0.5s ease-in-out infinite alternate;
@@ -367,12 +363,15 @@
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-.dialog__title {
+.dialog__content {
   display: flex;
   align-items: center;
   gap: 20px;
   margin-bottom: 30px;
   color: var(--accent-color);
+}
+
+.dialog__title {
   font-family: var(--accent-font);
   font-size: 14px;
   line-height: 1.5; /* 21px */
